@@ -1,0 +1,201 @@
+/* Using global sytles is not recommended, prefer local styles via CSS Modules */
+
+/*
+ * box model like it should be
+ *
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+html { box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*
+ * kill document defaults margin & padding. We all do that all the times, right ?
+ */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * page styles
+ */
+html {
+  min-height: 100%;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-family: "OFL Sorts Mill Goudy", "OFL Sorts Mill Goudy TT", serif;
+  color: white;
+  display: block;
+
+  color: #c9ddff;
+  font-weight: 100;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+
+  /*
+  system font https://medium.com/designing-medium/system-shock-6b1dc6d6596f
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+  */
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 23px;
+  line-height: 32px;
+  font-family: "OFL Sorts Mill Goudy", "OFL Sorts Mill Goudy TT", serif;
+  color: white;
+  display: block;
+}
+
+blockquote {
+  color: #606060;
+}
+
+/*
+ * .phenomic-HeadingAnchor
+ *
+ * anchors for markdown headings, generated via markdown renderer, so require
+ * global styling
+ */
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+:--headings {
+  position: relative;
+}
+
+:root {
+  --phenomic-HeadingAnchor-width: 1.4rem;
+  --phenomic-HeadingAnchor-margin: 0.4rem;
+}
+
+.phenomic-HeadingAnchor {
+  display: block;
+  text-align: center;
+  margin-left: calc(-1 * (var(--phenomic-HeadingAnchor-width) + var(--phenomic-HeadingAnchor-margin)));
+  margin-right: var(--phenomic-HeadingAnchor-margin);
+  width: var(--phenomic-HeadingAnchor-width);
+  line-height: var(--phenomic-HeadingAnchor-width);
+  text-decoration: none;
+
+  opacity: 0.1;
+  transition: opacity 0.2s;
+
+  @nest :--headings:hover & {
+    opacity: 1;
+  }
+}
+
+/* minimal styling, prefer removing this and use local styles */
+a {
+  color: #69a2e3;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7184e3;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1.2em;
+  background: #000;
+  border-radius: 5px;
+  border: 1px solid #3d3d3d;
+  border-top: 2px solid #767676;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+
+.phenomic-BodyContainer img {
+  width: 100%;
+}
