@@ -1,9 +1,10 @@
 # node / npm
 node_modules
 *.log
-.idea
+
 # phenomic build
 dist
-examples
-content/assets
-content/posts
+
+# ide
+.idea
+.vvscode
