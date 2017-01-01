@@ -6,6 +6,9 @@ import twitterSvg from "../icons/iconmonstr-twitter-1.svg"
 import gitHubSvg from "../icons/iconmonstr-github-1.svg"
 import avatarImgSrc from "../../../content/assets/avatar.jpeg"
 
+import {Starfield, Expander} from 'starfield-react'
+let ExpandingStarfield = Expander(Starfield)
+
 import styles from "./index.css"
 
 const Header = (props, { metadata: { pkg } }) => (
@@ -40,6 +43,13 @@ const Header = (props, { metadata: { pkg } }) => (
         }
       </div>
     </nav>
+
+      <ExpandingStarfield
+          className={ styles.starfield }
+          height={200}
+          starCount={900}
+          strokeStyle={randomColor()}
+      />
   </header>
 )
 
@@ -48,3 +58,13 @@ Header.contextTypes = {
 }
 
 export default Header
+
+function randomColor() {
+    let chars = '0123456789ABCDEF'
+    let color = new Array(6)
+        .fill(null)
+        .map(() => chars[Math.floor(Math.random() * chars.length)])
+        .join('')
+
+    return `#${color}`
+}
