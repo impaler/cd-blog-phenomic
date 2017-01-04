@@ -129,6 +129,7 @@
     "whatwg-fetch": "^0.11.0"
   },
   "dependencies": {
-    "phenomic": "0.19.5"
+    "phenomic": "0.19.5",
+    "starfield-react": "1.0.1"
   }
 }
