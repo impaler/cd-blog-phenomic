@@ -3,17 +3,21 @@
 ## Install dependencies
 
 ```sh
-npm install
+yarn install
 ```
 
 ## Run development server
 
 ```sh
-npm start
+yarn start
 ```
+
+The default browser will open [http://localhost:3333/](http://localhost:3333/).
 
 ## Build for production
 
 ```sh
-npm run build
+yarn run build
 ```
+
+A static version of the website will be generated in the `./dist` folder.
