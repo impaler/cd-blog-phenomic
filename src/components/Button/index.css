@@ -19,7 +19,7 @@
 }
 
 .secondary {
-  color: white;
+  color: var(--colorPrimaryDark);
   border: 1px solid var(--colorSecondaryDark);
 
   &:hover {
