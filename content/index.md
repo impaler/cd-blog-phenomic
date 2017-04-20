@@ -1,4 +1,4 @@
 ---
-title: Articles
-layout: Homepage
+title: Home
+layout: HomePage
 ---

@@ -1,5 +1,8 @@
 .footer {
   text-align: center;
+  & :hover {
+      color: var(--colorLinkTextHover);
+  }
 }
 
 .phenomicReference {

@@ -1,9 +1,24 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  min-width: 26rem;
   max-width: 40rem;
-  margin: 1rem auto;
-  padding: 1rem 0;
+  border: 1px solid gray;
+  margin: 10px;
+
+  & a {
+    display: block;
+  }
+
+  &:hover {
+    color: var(--colorSecondary);
+    border: 1px solid var(--colorSecondary);
+  }
+
+  & a {
+    margin: 10px;
+  }
 }
 
 .title {
@@ -22,7 +37,6 @@
 }
 
 .readMore {
-  /* align-self: center; */
   display: inline-flex;
   margin-top: 1rem;
   border-radius: 3px;
