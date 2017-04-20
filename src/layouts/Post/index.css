@@ -1,7 +1,22 @@
-.header {
-  display: flex;
-  justify-content: center;
-  opacity: 0.6;
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
+.more {
+  text-align: center;
+}
+
+.allPostsButton {
+  display: block;
+  color: white;
+  border: 1px solid var(--colorSecondaryDark);
+  width: 170px;
+  margin: 20px auto;
+  padding: 10px;
+  text-align:center;
+
+  & a {
+    display: block;
+  }
+
+  &:hover {
+    color: var(--colorSecondary);
+    border: 1px solid var(--colorSecondary);
+  }
 }

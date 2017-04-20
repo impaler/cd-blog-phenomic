@@ -1,8 +1,9 @@
 {
-  "name": "phenomic-christopherdecoster",
+  "name": "cd-blog-phenomic",
   "homepage": "https://christopherdecoster.com",
-  "twitter": "impaler12",
+  "twitter": "impaler777",
   "repository": "https://github.com/impaler",
+  "version": "1.1.0",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",
     "lint:css": "stylelint \"src/**/*.css\"",

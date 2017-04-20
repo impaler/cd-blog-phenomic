@@ -5,6 +5,7 @@ import PagePreview from "../PagePreview"
 import styles from "./index.css"
 
 const PagesList = ({ pages }) => {
+
   return (
     <div>
       {

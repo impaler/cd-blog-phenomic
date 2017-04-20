@@ -48,13 +48,11 @@
   text-decoration: none !important;
   opacity: 0.6;
   transition: 0.4s all;
-  border-bottom: 1px solid transparent;
 
   &:hover,
   &:focus {
     color: inherit;
     opacity: 1;
-    border-bottom-color: var(--colorNeutralLight);
   }
 }
 
@@ -68,18 +66,31 @@
   opacity: 0.6;
   transition: 0.4s all;
 
+  & :hover {
+    transform: scale(1.1, 1.1);
+    animation: predatorVision 1.1s infinite;
+  }
+
   &:hover,
   &:focus {
-     color: inherit;
-     opacity: 1;
-   }
+    color: inherit;
+    opacity: 1;
+  }
+}
+
+.link {
+  & :hover {
+    & svg {
+      transform: scale(1.2, 1.2);
+      fill: var(--colorLinkTextHover);
+    }
+  }
 }
 
 .link svg {
-  fill: currentColor;
-  opacity: 0.5;
-  width: 14px;
-  height: 14px;
+  fill: var(--colorNeutral);
+  width: 24px;
+  height: 24px;
   vertical-align: middle;
 }
 
@@ -87,4 +98,19 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@keyframes predatorVision {
+  0%, 100% {
+    filter: invert(0) saturate(90%) hue-rotate(0deg);
+  }
+  25% {
+    filter: invert(10%) saturate(410%) hue-rotate(170deg);
+  }
+  50% {
+    filter: invert(10%) saturate(300%) hue-rotate(290deg);
+  }
+  75% {
+    filter: invert(0%) saturate(410%) hue-rotate(70deg);
+  }
 }

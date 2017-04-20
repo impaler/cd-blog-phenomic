@@ -5,7 +5,8 @@ import { PageContainer as PhenomicPageContainer } from "phenomic"
 import AppContainer from "./AppContainer"
 import Page from "./layouts/Page"
 import PageError from "./layouts/PageError"
-import Homepage from "./layouts/Homepage"
+import HomePage from "./layouts/HomePage"
+import PostsPage from "./layouts/PostsPage"
 import Post from "./layouts/Post"
 
 const PageContainer = (props) => (
@@ -14,7 +15,8 @@ const PageContainer = (props) => (
     layouts={{
       Page,
       PageError,
-      Homepage,
+        HomePage,
+      PostsPage,
       Post,
     }}
   />

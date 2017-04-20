@@ -8,3 +8,6 @@ dist
 # ide
 .idea
 .vvscode
+
+content/posts
+content/assets

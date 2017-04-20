@@ -12,7 +12,7 @@ import Footer from "./components/Footer"
 const AppContainer = (props) => (
   <Container>
     <DefaultHeadMeta />
-    <Header />
+    { props.location.pathname !== '/' && <Header /> }
     <Content>
       { props.children }
     </Content>
@@ -22,6 +22,9 @@ const AppContainer = (props) => (
 
 AppContainer.propTypes = {
   children: PropTypes.node,
+  location: PropTypes.shape({
+      pathname: PropTypes.string
+  }),
 }
 
 export default AppContainer

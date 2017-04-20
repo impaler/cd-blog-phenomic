@@ -2,31 +2,25 @@ import React, { PropTypes } from "react"
 
 import LatestPosts from "../../components/LatestPosts"
 import Page from "../Page"
+import { Link } from "phenomic"
 
 import styles from "./index.css"
 
 const Post = (props) => {
-  // it's up to you to choose what to do with this layout ;)
-  const pageDate = props.head.date ? new Date(props.head.date) : null
-
   return (
-    <Page
-      { ...props }
-      header={
-        <div>
-          <header className={ styles.header }>
-            {
-              pageDate &&
-              <time key={ pageDate.toISOString() }>
-                { pageDate.toDateString() }
-              </time>
-            }
-          </header>
-        </div>
-      }
-    >
-      <hr />
-      <LatestPosts numberOfPosts={2} />
+    <Page { ...props } >
+      <div className={styles.more}>
+        <br />
+        <br />
+        <hr />
+        <LatestPosts
+          numberOfPosts={2}
+          excludePostTitle={props.head.title}
+        />
+        <Link to={ "/blog" } className={styles.allPostsButton}>
+          All posts
+        </Link>
+      </div>
     </Page>
   )
 }
