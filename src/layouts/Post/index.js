@@ -10,8 +10,6 @@ const Post = (props) => {
   return (
     <Page { ...props } >
       <div className={styles.more}>
-        <br />
-        <br />
         <hr />
         <LatestPosts
           numberOfPosts={2}

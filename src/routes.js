@@ -15,7 +15,7 @@ const PageContainer = (props) => (
     layouts={{
       Page,
       PageError,
-        HomePage,
+      HomePage,
       PostsPage,
       Post,
     }}
