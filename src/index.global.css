@@ -121,6 +121,10 @@ code {
   background: #2c2c2c ! important;
 }
 
+*::-webkit-scrollbar-thumb:hover {
+  background: #6a6a6a ! important;
+}
+
 *::-webkit-scrollbar-corner,
 *::-webkit-scrollbar-track {
   background: #0c0c0c ! important;

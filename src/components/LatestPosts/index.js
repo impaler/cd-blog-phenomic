@@ -8,7 +8,6 @@ const LatestPosts = (props, { collection }) => {
   const limit = props.numberOfPosts || 0
   const options = Object.assign({}, {
     filter: item => item.title !== excludePostTitle && item.layout === "Post",
-    sort: () => .5 - Math.random(),
     reverse: false
   }, { limit })
   const latestPosts = enhanceCollection(collection, options)

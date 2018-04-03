@@ -30,12 +30,19 @@ const HomePage = (props, {
         </p>
       </div>
 
-      <div>
-        <div className={styles.blogNavigation}>
+      <div className={styles.blogNavigation}>
+        <div>
           <Link
             to={ "/blog" }
           >
-            Read my blog
+            Blog
+          </Link>
+        </div>
+        <div>
+          <Link
+            to={ "/posts/reading-list" }
+          >
+            Reading List
           </Link>
         </div>
       </div>
